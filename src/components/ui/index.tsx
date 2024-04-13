@@ -1,0 +1,15 @@
+import { Footer } from "./footer"
+import { Main } from "./main"
+import { Header } from "./header"
+import { Col } from "./col"
+import { Row } from "./row"
+import { Logo } from "./header/logo"
+
+export  {
+    Footer,
+    Main,
+    Header,
+    Row,
+    Col,
+    Logo
+}
