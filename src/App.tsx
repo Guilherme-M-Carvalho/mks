@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
 import Home from './pages/home';
@@ -10,7 +10,7 @@ import { Card } from './components/ui/card';
 import { ButtonCart } from './components/ui/buttonCart';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import SidebarProvider from './contexts/sideBarContext';
+import SidebarProvider, { SidebarContext } from './contexts/sideBarContext';
 import SidebarTemplate from './templates/sidebar';
 
 const client = new QueryClient()
@@ -27,6 +27,8 @@ function App() {
 
 function Screen() {
 
+  const { toggleAside, amount } = useContext(SidebarContext)
+
   return (
   <>
     <Header.Root>
@@ -35,10 +37,10 @@ function Screen() {
           <Header.Logo>MKS</Header.Logo>
           <Header.LogoSpan>Sistemas</Header.LogoSpan>
         </div>
-        <Card disabledShadow>
-          <ButtonCart>
+        <Card disabledShadow fitContent>
+          <ButtonCart onClick={toggleAside}>
             <FontAwesomeIcon icon={faCartShopping} />
-            0
+            {amount}
           </ButtonCart>
         </Card>
       </Header.Row>

@@ -4,6 +4,7 @@ import { Header } from "./header"
 import { Col } from "./col"
 import { Row } from "./row"
 import { Logo } from "./header/logo"
+import { ButtonClose } from "./buttonClose"
 
 export  {
     Footer,
@@ -11,5 +12,6 @@ export  {
     Header,
     Row,
     Col,
-    Logo
+    Logo,
+    ButtonClose
 }

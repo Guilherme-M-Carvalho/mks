@@ -17,11 +17,7 @@ export default function useFindProducts({ orderBy = "DESC", sortBy = "id", page,
         return res.data
     }
 
-    const query = useQuery({
-        queryFn: handleFind,
-        queryKey: "find-products",
-        enabled: !!page && !!rows,
-    })
+    const query = useQuery(["get", rows], handleFind)
 
     return {
         ...query,

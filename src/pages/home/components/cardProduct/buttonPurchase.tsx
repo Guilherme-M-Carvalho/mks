@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ButtonPurchase = styled.button`
     background: ${props => props.theme.primaryColor};
+    min-height: 36px;
     height: 36px;
     width: 100%;
     border:none;

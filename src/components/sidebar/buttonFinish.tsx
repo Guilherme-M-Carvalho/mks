@@ -8,9 +8,8 @@ display: flex;
 font-size: 20px;
 font-weight: 700;
 background: black;
-margin-top: auto;
 border: none;
-height: 60px;
+height: 70px;
 width: 100%;
 justify-content: center;
 `

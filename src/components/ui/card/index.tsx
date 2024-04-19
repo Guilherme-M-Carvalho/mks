@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Card = styled.div<{disabledShadow?: boolean}>`
+export const Card = styled.div<{ disabledShadow?: boolean; fitContent?: boolean; noOverflow?: boolean; widthMax?: boolean }>`
     width: 218px;
     height: 285px;
     border-radius: 8px;
@@ -10,5 +10,8 @@ export const Card = styled.div<{disabledShadow?: boolean}>`
     flex-direction: column;
     gap: 8px;
     overflow: hidden;
-    ${props => props.disabledShadow && 'box-shadow: none; height: fit-content; width:fit-content;'}
+    ${props => props.disabledShadow && 'box-shadow: none;'}
+    ${props => props.fitContent && 'height: fit-content; width:fit-content;'}
+    ${props => props.noOverflow && 'overflow: initial;'}
+    ${props => props.widthMax && 'width:100%;'}
 `
